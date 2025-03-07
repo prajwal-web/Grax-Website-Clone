@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.mulish-bold {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.container {
+  display: grid;
+  background: #000;
+  width: 100%;
+  height: 100vh;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
+  background: url("https://marketifythemes.net/html/grax/img/slider/2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.nav ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  list-style: none;
+}
+.nav {
+  margin-top: 24px;
+}
+
+.nav ul li a.active,
+.nav ul li a:hover {
+  color: red;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 10px;
+  font-family: "Mulish";
+}
+
+.logoText {
+  display: grid;
+  height: 60vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: start;
+  padding: 20px;
+  margin-left: 100px;
+}
+
+.hero-content {
+  grid-row: 2/3;
+  margin-top: 150px;
+}
+
+.hero-content h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 72px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  letter-spacing: 1.5px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.logoText .nav {
+  padding: 10px 0;
+}
+.settingImage {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  position: fixed;
+  top: 200px;
+  right: 5px;
+  filter: invert(100%);
+  text-align: center;
+  cursor: pointer;
+}
+.settingImage img {
+  animation: spin 4s linear infinite;
+  margin: 0 auto;
+  margin-top: 20%;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.inner {
+  width: 2px;
+  height: 30px;
+  border-radius: 20px;
+  background: white;
+  position: absolute;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@keyframes example {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+    height: 20px;
+    background-color: white;
+  }
+  50% {
+    transform: translateY(50px);
+    opacity: 1;
+    height: 10px;
+    background-color: white;
+  }
+  75% {
+    transform: translateY(100px);
+    opacity: 1;
+    height: 5px;
+    background-color: white;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+    height: 0px;
+    background-color: black;
+  }
+}

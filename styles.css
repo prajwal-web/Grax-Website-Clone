@@ -35,7 +35,9 @@ body {
   background-position: center center;
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -52,12 +54,19 @@ body {
   padding: 20px 50px;
   color: white;
   z-index: 1000; 
-  left: 150px;
+  left: 0px;
+  height: 100px;
+  background-color: #000;
+  z-index: 10;
+  transition: 0.3s;
+  
 }
 
 .nav .logo {
   font-size: 2rem;
   font-weight: bold;
+  position: relative;
+  left: 140px;
 }
 
 .list {
@@ -70,7 +79,8 @@ body {
   grid-template-columns: repeat(5, auto); 
   gap: 50px;
   list-style: none;
-  margin-left: 150px;
+  position: absolute;
+  right: 200px;
 
 }
 
@@ -200,7 +210,7 @@ body {
 .nav {
   opacity: 0;
   transform: translateY(-50px);
-  animation: fadeIn 1s ease-in-out 2s forwards;
+  animation: fadeIn 1s ease-in-out 2.3s forwards;
 }
 
 @keyframes fadeIn {
@@ -221,7 +231,7 @@ body {
   background: white;
   padding: 40px;
   border-radius: 10px;
-  min-height: 100vh;
+  min-height: 85vh;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: auto;
   align-items: center;
@@ -229,8 +239,12 @@ body {
 
 .image-container img {
   width: 400px;
-  height: 560px;
+  height:500px;
   border-radius: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  image-rendering: crisp-edges; 
   margin-left: 160px;
 }
 
@@ -421,7 +435,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1000px;
+ width: 65%;
   padding: 50px;
   margin-top: 100px;
 
@@ -447,7 +461,9 @@ h2 {
 }
 
 .brandings {
-  width: 50%;
+  width: 80%;
+  position: relative;
+  left: 100px;
 }
 
 .skill-item {
@@ -567,4 +583,9 @@ h2 {
   transform: scaleX(0); 
   transform-origin: right; 
   transition: transform 0.5s ease; 
+}
+.paper img{
+  width: 100%;
+  position: relative;
+  bottom: 58px;
 }
